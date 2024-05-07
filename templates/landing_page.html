@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+    <script src ="https://kit.fontawesome.com/f8e211a5b2.js"></script>
+    <link rel="stylesheet" href="static\css\general.css">
+    <link rel="stylesheet" href="static\css\style.css">
+    <title>StockWise</title>
+    <link rel="icon" href="static\image\money-bill-trend-up-solid.svg">
+    
+</head>
+<body style="background-image: url('static\\image\\stock.jpg'); background-size: 100%;">
+    <div>
+        <marquee>
+            Stock Analysis and Best financial tool for Indian Stock Market
+        </marquee>
+    </div>
+    <div class="header-up">
+        <div>
+            <i class="fa-solid fa-money-bill-trend-up" id="stock-icon"></i>
+            <h2>StockWise</h2>
+        </div>
+        <div>
+            <button class="profile"><i class="fa-regular fa-user"></i></button>
+        </div>
+        
+    </div>
+    <div class="header">
+        <form action="{{ url_for('report') }}" method="post">
+            <div class="row">
+                    <input type="text" name="stocks" placeholder="Search Stocks" id="search-bar">
+                    <button type="submit" value="submit" class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+            </div>
+            <div class="result-box">
+            </div>
+        </form>
+    </div>
+    <!-- <div class="header">
+        <div class="row">
+            <input type="text" placeholder="Search Stocks" id="search-bar">
+            <button class="search-button" onclick="searchStocks()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="result-box">
+        </div>
+    </div> -->
+    
+    <script src="static\js\autocomplete.js"></script>
+    
+</body>
+</html>
